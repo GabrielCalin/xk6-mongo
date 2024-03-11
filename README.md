@@ -8,6 +8,10 @@ K6 extension to perform tests on mongo.
 - Supports inserting document batch.
 - Supports find a document based on filter.
 - Supports find all documents of a collection.
+- Supports upserting a document based on filter.
+- Supports bulk upserting documents based on filters.
+- Supports aggregation pipelines.
+- Supports finding distinct values for a field in a collection based on a filter.
 - Supports delete first document based on filter.
 - Supports deleting all documents for a specific filter.
 - Supports dropping a collection.
@@ -31,7 +35,7 @@ To build a custom `k6` binary with this extension, first ensure you have the pre
 2. [Build the k6 binary](https://github.com/grafana/xk6#command-usage):
 
     ```bash
-    xk6 build --with  github.com/GhMartingit/xk6-mongo
+    xk6 build --with  github.com/GabrielCalin/xk6-mongo
     ```
 
    This will create a k6 binary that includes the xk6-mongo extension in your local folder. This k6 binary can now run a k6 test.
@@ -40,7 +44,7 @@ To build a custom `k6` binary with this extension, first ensure you have the pre
 To make development a little smoother, use the `Makefile` in the root folder. The default target will format your code, run tests, and create a `k6` binary with your local code rather than from GitHub.
 
 ```shell
-git clone git@github.com/GhMartingit/xk6-mongo.git
+git clone git@github.com/GabrielCalin/xk6-mongo.git
 cd xk6-mongo
 make build
 ```
